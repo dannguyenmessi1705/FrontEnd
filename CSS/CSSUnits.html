@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Các đơn vị trong CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSSUnits.css">
+        <!-- <style>
+            html {
+                background-color: azure;
+                font-size: 16px;
+            }
+        </style> -->
+    </head>
+    <body>
+        <div>
+            <h1 style="color: red;"><b>1. Đơn vị tuyệt đối (Absolute Unit): Không phụ thuộc vào bất cứ thẻ, kích thước trình duyệt nào.</b></h1>
+            <ul>
+                <li>px - <i>Cỡ chữ mặc định là 16px</i></li>
+                <li>pt - <i>1pt = 1/72in</i></li>
+                <li>cm</li>
+                <li>mm - <i>10mm = 1cm</i></li>
+                <li>inch - <i>1in = 2.54cm = 96px = 72pt</i></li>
+                <li>pc - <i>1pc = 12pt</i></li>
+            </ul>
+        </div>
+        <div>
+            <h1 style="color: red;"><b>2. Đơn vị tương đối (Relative Unit): Phụ thuộc vào thẻ, kích thước trình duyệt.</b></h1>
+            <ul>
+                <li>% - <i>Kích thước thay đổi tỉ lệ và phụ thuộc vào thẻ cha của nó có thể thay đổi linh hoạt khi thẻ cha thay đổi</i></li>
+                <li>rem - <i>Kích thước tỉ lệ phụ thuộc vào việc khai báo định dạng ở thẻ &lt;html&gt;</i></li>
+                <li>em - <i>Kích thước tỉ lê và phụ thuộc vào thẻ cha gần nhất của nó, nếu thẻ cha gần nhất không khai báo gì thì nó sẽ dần lan rộng ra tìm thẻ cha gần nhất mà có khai báo về size</i></li>
+                <li>vw - <i>Kích thước tỉ lệ và phụ thuộc vào kích thước chiều rộng của trình duyệt</i></li>
+                <li>vh - <i>Kích thước tỉ lệ và phụ thuộc vào kích thước chiều cao của trình duyệt</i></li>
+                <li>vmin - <i>Lấy giá trị nhỏ hơn giữa 2 giá trị vwidth và vheight</i></li>
+                <li>vmax - <i>Lấy giá trị lớn hơn giữa 2 giá trị vwidth và vheight</i></li>
+                <li>ex - <i>Giá trị tương đối so với x-height của font hiện tại</i></li>
+                <li>ch - <i>Giá trị tương đối so với width của phần tử "0"</i></li>
+            </ul>
+        </div>
+        <div>
+            <h3 style="color: red; font-size: 50px;">Ví dụ sử dụng đơn vị %</h3>
+            <p class="p p1">25%</p>
+            <p class="p p2">50%</p>
+            <p class="p p3">75%</p>
+            <p class="p p4">100%</p>
+        </div>
+        <div>
+            <h3 style="color: red; font-size: 50px;">Ví dụ sử dụng đơn vị rem</h3>
+            <p class="r rem1">Cỡ chữ 1 rem</p>
+            <p class="r rem2">Cỡ chữ 2 rem</p>
+            <p class="r rem3">Cỡ chữ 3 rem</p>
+        </div>
+    </body>
+</html>

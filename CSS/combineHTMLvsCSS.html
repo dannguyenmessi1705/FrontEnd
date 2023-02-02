@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Ket hop HTML vs CSS</title>
+        <meta charset="utf-8">
+        <!--CACH 1 (Internal) ! Phải để thẻ style ở trong 1 đoạn thẻ nào đó của html như ví dụ này ở trong thẻ head, không được để bên ngoài thẻ head 
+        Trong ví vụ này ta sẽ thay đổi định dạng thẻ h1 -->
+        <style>
+            h1 {
+                color: brown; 
+                font-size: 50px;
+                background-color: cyan;
+                text-align: center;
+            }
+        </style>
+        <!--CACH 2 (External) ! Phai thêm câu lệnh để link file css lại, phần link được đặt trong thẻ head, Trong ví dụ này ta sẽ đổi định dạng thẻ li -->
+        <link rel="stylesheet" href="combineHTMLvsCSS.css">
+    </head>
+    <body style="background-color: blanchedalmond;">
+        <h1>Co 3 cach de dung <abbr title="Cascading Style Sheets">CSS</abbr> trong <abbr title="HyperText Markup Language">HTML</abbr></h1>
+        <ol>
+            <li><mark><b>Internal</b></mark> (Dung ngay trong file html voi the <q>style</q>)</li>
+            <li><mark><b>External</b></mark> (Tao 1 file css o ngoai roi link vao file html)</li>
+             <!--CACH 3 (Inline) ! Sử dụng như 1 attribute cho 1 thẻ html -->
+            <li style="color: chartreuse; font-size: 20px;"><mark><b>Inline</b></mark> (Su dung attribute <q>style</q> ngay trong the cua html)</li>
+        </ol>
+    </body>
+</html>

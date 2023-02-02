@@ -1,0 +1,30 @@
+#heading{
+    width: 35%;
+    height: 20px;
+    margin: 0% 35%;
+    padding: 8px 8% 8px;
+    background-color: aqua;
+    color: red;
+}
+#be::before{
+    content: "Ví dụ phần tử giả ở đây ";
+    display: block; /* Thẻ div mặc định dạng khối, các thẻ khác muốn thêm vào trước dòng thì thêm display: block; */
+}
+#af::after{
+    content: " Ví dụ phần tử giả ở đây ";
+    display: block; /* Thẻ div mặc định dạng khối, các thẻ khác muốn thêm vào sau dòng thì thêm display: block; */
+}
+#le::first-letter{
+    content: "";
+    color: red;
+    font-style: italic;
+}
+#li::first-line{
+    content: "";
+    color: violet;
+    text-decoration: underline;
+}
+#se::selection{
+    color: aliceblue;
+    background-color: black;
+}

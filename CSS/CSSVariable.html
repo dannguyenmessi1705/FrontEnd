@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dat bien trong HTML - CSS</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="CSSVariable.css">
+    </head>
+    <body>
+        <h1>Cach tao bien trong HTML - CSS</h1>
+        <div>
+            <p>Trong HTML - CSS co <b>2 cach</b> tao bien. Muc dich la de khi co nhung thay doi ve gia tri, dinh dang van ban, ta chi can thay doi gia tri bien
+            de cac the khac thay doi thay vi sua gia tri tung the mot</p>
+            <ul id="UK"><i>Hai cach tao bien do la: </i></ul>
+            <li><b>Tao bien toan cuc</b>(<i>Bien se duoc dung trong toan bo cac the</i>): Bang cach tao ra the gia ":root" roi dat ten bien vao do
+            <br><p>VD:<br><b> :root{ --text-color: red; } <br>
+                            h1{ color: var(--text-color); } </b><br>
+                           => Toan bo the h1 se co mau red 
+            </p></li>
+            <li><b>Tao bien cuc bo</b>(<i>Bien chi su dung trong noi bo cac the chua no</i>): Bang cach dat ten bien o ngay trong the can tao bien cuc bo
+            <br>
+            <p>VD:<br><b>
+            h1{
+                --color-text: green;
+                color: var(--color-text); }</b><br>
+            => Toan bo text trong the h1 co mau xanh</p></li>
+        </div>
+    </body>
+</html>

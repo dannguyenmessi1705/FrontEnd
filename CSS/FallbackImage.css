@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+.heading{
+    color: red;
+}
+.content{
+    font-size: 20px;
+    margin: 5px 0px 0px 5px;
+}
+.description{
+    font-size: 16px;
+    margin: 5px 0 0 -5px;
+}
+#VDa{
+    margin: 10px;
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+#VDb{
+    margin: 10px;
+    width: 400px;
+    height: 400px;
+    display: block;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpr3QgwveU8fd060IRy0CMXIVOOV_RcLx3BInTE5DKGNWAhrjtrcOE7ZDZhPMcAiBbtBs&usqp=CAU), url("FallbackImage\\400x400-image.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đệm viền và khoảng cách lề trong CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="PaddingBorderMargin.css">
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Một số thuộc tính liên quan đến đệm, viền và khoảng cách lề trong CSS</h1>
+        </div>
+        <div class="content">
+            <div class="main 1">
+                <h2 class="title"><b>1. Thuộc tính Padding.</b></h2>
+                <p class="ND">Thuộc tính tạo vùng đệm cho nội dung, nó làm cho kích thước của phần tử tăng lên. Cụ thể box ban đầu có size là 100x100,
+                    sau khi đệm 4 hướng 10px, size của nó sẽ tăng lên 120px x 120px.<br><i>VD: </i></p>
+                <div id="VD1">Đây là ví dụ về Padding</div>
+            </div>
+            <div class="main 2">
+                <h3 class="title"><b>2. Thuộc tính Border.</b></h3>
+                <p class="ND">Thuộc tính tạo viền bao xung quanh phần tử, nó làm cho kích thước của phần tử tăng lên. Cụ thể box ban đầu có size là 100x100,
+                    sau khi đệm 4 hướng 10px và tạo viền 3px, size của nó sẽ tăng lên 126px x 126px.<br><i>VD: </i>
+                </p>
+                <div id="VD2">Đây là ví dụ về Border</div>
+            </div>
+            <div class="main 3">
+                <h3 class="title"><b>3. Thuộc tính Margin.</b></h3>
+                <p class="ND">Thuộc tính tạo ra khoảng cách giữa các phần tử, kích thước của phần tử không tăng lên. Cụ thể 3 box ban đầu có size là 100x100, 
+                    tạo margin right cho box đầu là 10px, margin top là 10px, thì nó sẽ cách 2 box như sau <br><i>VD: </i>
+                </p>
+                <div class="VD3 a">Box 1</div>
+                <div class="VD3 b">Box 2</div>
+                <div class="VD3 c">Box 3</div>
+            </div>
+            <div class="main 4" style="clear: left;">
+                <h3 class="title"><b>4. Thuộc tính Box-sizing.</b></h3>
+                <p class="ND">Thuộc tính tự tính toán sao cho các phần tử sau khi thêm padding, border nhưng kích thước phần tử vẫn không tăng lên. 
+                    Cụ thể box ban đầu có size là 100x100, sau khi đệm 4 hướng 10px và tạo viền 3px (đủ nhỏ hợp lý),thêm thuộc tính box-sizing size của nó sẽ giữ nguyên 100px x 100px.<br><i>VD: </i>
+                </p>
+                <div id="VD4">Đây là ví dụ về Box-sizing</div>
+            </div>
+        </div>
+    </body>
+</html>

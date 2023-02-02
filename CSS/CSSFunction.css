@@ -1,0 +1,24 @@
+html {
+    background-color: brown;
+}
+:root{
+    --text-color: rgba(34, 230, 129, 0.722);
+    --background-color: rgba(55, 37, 70, 0.978);
+    --text2-color: white;
+    --text-size: 18px;
+}
+#id{
+    font-size: var(--text-size);
+}
+#f1{
+    color: var(--text-color);
+}
+#f2{
+    background-color: var(--background-color);
+    color: var(--text2-color);
+    width: calc(50% + 10%);
+}
+/* Hàm attr() dùng để nối thêm từ đã có từ trước */
+#attri::after{
+    content: "("attr(href)")";
+}

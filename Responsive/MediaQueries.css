@@ -1,0 +1,39 @@
+li{
+    font-size: 30px;
+    color: brown;
+    text-align: center;
+}
+.PC,
+.Tablet,
+.Mobile{
+    display: none;
+}
+/* Hiển thị trên màn PC */
+@media (min-width: 1024px){
+    .PC{
+        display: block;
+    }
+    html{
+        background-color: rgba(26, 32, 207, 0.386);
+    }
+}
+
+/* Hiển thị trên màn Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .Tablet{
+        display: block;
+    }
+    html{
+        background-color: rgba(183, 223, 38, 0.396);
+    }
+}
+
+/* Hiên thị trên màn Mobile */
+@media (max-width: 739px) {
+    .Mobile{
+        display: block;
+    }
+    html{
+        background-color: rgba(223, 38, 121, 0.396);
+    }   
+}

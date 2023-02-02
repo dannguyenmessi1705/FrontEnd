@@ -1,0 +1,42 @@
+/* Sử dụng đơn vị % */
+*{
+    margin: 0px; /* Căn chỉnh lề so với trình duyệt (value - top=right=bottom=left, value value - top = bottom right=left, value value value - top right=left bottom) */
+    padding: 0px 0px 0px 0px; /* Căn chỉnh nội dung so với khung lề, căn chữ trong khung */
+}
+.p {
+    height: 50px; /*Chiều cao ban đầu là height: auto nên nếu ko đặt giá trị cho height thì các thẻ con dùng % theo thẻ cha sẽ ko có tác dụng
+                    Đối với chiều rộng, mặc định các thẻ sẽ là width: 100% nên ko cần đặt giá trị nữa */
+}
+.p1{
+    width: 25%;
+    background-color: blue;
+}
+.p2 {
+    width: 50%;
+    background-color: aquamarine;
+}
+.p3 {
+    width: 75%;
+    background-color: chocolate;
+}
+.p4 {
+    width: 100%; /* 1vw */
+    background-color: yellow;
+}
+/* Sử dụng đơn vị rem, đơn vị này sẽ phụ thuộc vào thẻ html */
+html {
+    font-size: 16px;
+}
+.r{
+    padding: 0px 0px 0px 40%;
+    color: blue;
+}
+.rem1{
+    font-size: 1rem;
+}
+.rem2{
+    font-size: 2rem;
+}
+.rem3{
+    font-size: 3rem;
+}

@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+/* padding */
+#VD1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    padding: 10px 10px;
+}
+/* border */
+#VD2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    padding: 10px 10px;
+    border: 3px solid #333;
+    border-radius: 10px;
+
+}
+/* margin */
+.VD3{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    padding: 10px 10px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    float: left; /* Các phần tử thay vì xếp theo hàng dọc bây giờ nó sẽ dàn sang ngang bắt đầu từ trái */
+    /* Sau này các tag kế tiếp nó sẽ theo định dạng này, để trở về ban đầu, ta sử dụng thuộc tính -
+    "clear: left" */
+}
+.VD3.a{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+/* Box-sizing */
+#VD4{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    padding: 10px 10px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}

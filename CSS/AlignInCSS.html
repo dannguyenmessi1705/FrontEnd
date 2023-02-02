@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Căn chỉnh content trong CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="AlignInCSS.css">
+    </head>
+    <body>
+        <div>
+            <h1 class="heading">Các cách căn chỉnh đối tượng trong CSS</h1>
+        </div>
+        <div class="content" style="height: 5000px;">
+            <div class="content a">
+                <p class="sub">Trong CSS có các cách để căn chỉnh đối tượng sau:</p>
+                <ul>
+                    <li><b>Sử dụng thuộc tính "line-height"</b><i> - Thuộc tính này xác định chiều cao của đối tượng khi được "bôi đen", ví dụ để căn chỉnh đối tượng ra giữa, ta chỉ cần cho line-height = chiều cao của phần tử chứa nó + "text-align: center".
+                    </i></li>
+                    <div id="VDa">line-height</div>
+                    <li><b>Sử dụng thuộc tính "display: flex"</b><i> - Thuộc tính này kết hợp với các thuộc tính như "justify-content: center;" và "align-items: center;" để có thể căn chỉnh đối tượng ra chính giữa. </i></li>
+                    <div id="VDb">Flex</div>
+                    <li><b>Sử dụng thuôc tính position.</b><i> - Thuộc tính này kết hợp với các thuộc tính điều hướng + "transform" để có thể căn chỉnh. Ví dụ muốn căn đối tượng ra giữa, ta dùng
+                        thuộc tính "top: 50%", "left: 50%" và "transform: translateX(-50%) translateY(-50%) - trừ đi đúng khoảng cách chính giữa của đối tượng đè lên vùng chứa nó".</i></li>
+                    <div id="VDcpa">
+                        <div id="VDcch">Position</div>
+                    </div>
+                    <li><b>Sử dụng thuộc tính "margin: auto"</b><i> - Thuộc tính kết hợp với "display: flex;" làm cho đối tượng được căn về chính giữa.</i></li> 
+                        <div id="VDdpa">
+                            <div id="VDdch">MarginAuto</div>
+                        </div>
+                    <li><b>Cách thêm 1 đối tượng được căn theo 1 đối tượng khác. Cụ thể thêm dấu gạch đứng cạnh content. <i>Ta dùng lớp giả để tạo đối tượng gạch đứng (thêm border), có thể thay đổi kích thước tùy ý mà không sợ làm thay đổi size của lớp bằng cách sử dụng phần tử giả.</i></b></li>
+                        <div id="VDepa">
+                            <div id="VDech">Nguyen Di Dan</div>
+                        </div>
+                </ul>
+
+            </div>
+        </div>
+    </body>
+</html>

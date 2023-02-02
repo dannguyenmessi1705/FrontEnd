@@ -1,0 +1,539 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --height-header: 46.5px;
+}
+/* Cách làm
+1. Từ thẻ ngoài vào thẻ trong.
+2. Từ thẻ trên xuống thẻ dưới.
+3. Trong thẻ thì làm từ tổng quan đến chi tiết.
+*/
+
+/* Cách làm cụ thể
+1. Xác định vị trí.
+2. Xác định kích thước.
+3. Xác định màu sắc.
+4. Xác định định dạng (hình dạng, font chữ, các thuộc tính, đặc điểm).
+*/ 
+
+.clear-float{
+    clear: both;
+}
+
+.text-white{
+    color: #fff !important;
+}
+
+#wrapper{
+
+}
+
+#header{
+    z-index: 1; /* Làm cho thanh header nổi lên trên các khối phía sau */
+    height: var(--height-header);
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+    list-style-type: none;
+}
+
+#nav > li > a{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: var(--height-header);
+    padding: 0px 24px;
+    display: block;
+}
+
+#nav li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: #000;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav a{
+    display: block;
+    min-width: 160px;
+    color: #000;
+    text-decoration: none;
+    padding: 8px 16px;
+    line-height: 22px;
+}
+
+#nav .down-btn{
+    font-size: 12px;
+}
+
+#header .mobile-menu,
+#header .search-btn{
+    display: block;
+    float: right;
+    color: white;
+    line-height: var(--height-header);
+    padding: 0 23px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .mobile-menu.ti-menu{
+    font-size: 15px;
+}
+
+#header .search-btn.ti-search{
+    font-size: 13px;
+}
+
+#header .mobile-menu:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Ẩn thsnh menu khi trình duyệt ở chế độ dành cho tablet, PC */
+#header .mobile-menu{
+    display: none;
+}
+
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer; /* Chuyển con trỏ khi trỏ vào đối tượng */
+}
+
+#slider{
+    margin-top: var(--height-header);
+    padding-top: 50%; /* Ngầm hiểu bằng 1 nửa  chiều rộng */
+    background: url('/Project_Band_W3school/assets/img/slider1.jpg') center top / cover no-repeat;
+    position: relative;
+}
+
+/* .slidershow .slider-picture{
+    width: 100%;
+    padding: 0;
+    margin: 0;    
+} */
+
+#slider .text-content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#slider .text-content .text-heading{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#slider .text-content .text-description{
+    margin: 15px 0px 50px;
+    font-weight: bold;
+}
+
+#content{
+
+}
+
+#content .content-session{
+    padding: 64px 16px;
+    width: 800px;
+    margin: 0px auto;
+    position: relative;
+    max-width: 100%;
+}
+
+#content .content-session .content-heading{
+    margin: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 3.5px;
+
+}
+
+#content .content-session .content-slogan{
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+#content .content-session .content-description{
+    margin: 15px 0px;
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#content .member-list{
+    text-align: center;
+    padding: 32px 0px;
+}
+
+#content .member-name{
+    margin: 15px 0px;
+    font-size: 15px;
+}
+
+#content .member-list .member-item{
+    float: left;
+    width: calc(100% / 3);
+}
+
+#content .member-img{
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+#Tour{
+    background-color: #000;
+}
+
+#Tour .ticket{
+    background-color: #fff;
+    list-style-type: none;
+}
+
+#Tour .ticket li{
+    color: #757575;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-bottom: 1px #ddd solid;
+}
+
+#Tour .soldout{
+    color: white;
+    background-color: #f44336;
+    margin-left: 16px;
+    padding: 2px 8px;
+}
+
+#Tour .number-ticket{
+    float: right;
+    background-color: #000;
+    color: white;
+    border-radius: 50%;
+    padding: 0 8px;
+    margin-right: 16px;
+
+}
+
+.place-list{
+    margin: 32px -8px;
+
+}
+
+.place-item{
+    float: left;
+    width: calc(100%/3);
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+    
+.place-img{
+    width: 100%; /* Xét chiều rộng bằng chiều rộng cua thẻ chứa nó */
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 0;
+}
+
+.place-content{
+    background-color: #fff;
+    color: #000;
+    padding: 0 16px;
+    font-size: 15px;
+}
+
+.place-date{
+    color: #757575;
+    margin-bottom: 15px;
+}
+
+.place-desc{
+    margin-bottom: 15px;
+}
+
+.buy-btn{
+    display: inline-block;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 11px 19px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+.buy-btn:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal-container{
+    position: relative;
+    width: 60%;
+    min-height: 250px;
+    background-color: #fff;
+    padding-bottom: 22px;
+    animation: ModalAnimation ease 0.6s;
+}
+/* Tạo animation cho modal xuất hiện */
+@keyframes ModalAnimation {
+    from{
+        transform: translateY(-129px);
+        opacity: 0.3;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    opacity: 0.6;
+    color: #fff;
+}
+
+.modal-close:hover{
+    opacity: 1;
+    background-color: #f44336;
+}
+
+.modal-heading{
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-align: center;
+    background-color: #009688;
+    padding: 55px;
+    color: #fff;
+}
+
+.m.ti-bag{
+    margin-right: 6px
+}
+
+.modal-body{
+    padding: 0.15px 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.modal-label{
+    display: block;
+    margin: 15px 0 5px 0;
+}
+
+.modal-input{
+    display: block;
+    padding: 8px 8px;
+    margin-bottom: 28px;
+    width: 100%;
+}
+
+.modal-btn{
+    width: 100%;
+    background-color: #009688;
+    padding: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    margin-bottom: 16px;
+}
+
+.modal-btn:hover{
+    opacity: 0.4;
+}
+
+.modal-footer{
+    padding: 0px 16px;
+    text-align: right;
+    margin: 15px 0px;
+}
+
+.modal-help{
+    color: #2196f3;
+}
+
+.col{
+    width: 50%;
+    float: left;
+}
+
+.contact-form{
+    padding: 32px 0;
+    line-height: 1.4;
+}
+
+.contact-info{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#Contact [class^="ti-"]{ /* class^=: tất cả class bắt đầu ="", class*=: tất cả class "" ở bên trong, class$=: tất cả class kết thúc bằng "" */
+    float: left;
+    font-weight: bolder !important;
+    padding-right: 15px;
+
+}
+
+.contact-type{
+
+}
+
+.divname{
+    padding-right: 8px;
+}
+
+.contact-name{
+    padding: 8px;
+    border: 1px #ccc solid;
+    width: 100%;
+    font-size: 15px;
+}
+
+.divemail{
+    padding-left: 8px;
+}
+
+.contact-email{
+    padding: 8px;
+    border: 1px #ccc solid;
+    width: 100%;
+    font-size: 15px;
+}
+
+.divmessage{
+    float: left;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.contact-message{
+    padding: 8px;
+    width: 100%;
+    border: 1px #ccc solid;
+    font-size: 15px;
+}
+
+.contact-btn{
+    float: right;
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 16px 0px;
+}
+
+.contact-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.map{
+    width: 100%;
+}
+
+#footer{
+    padding: 64px 16px;
+}
+
+.social-media{
+    text-align: center;
+}
+
+#footer [class*="ti-"]{
+    text-decoration: none;
+    color: #757575;
+    font-size: 20px;
+}
+
+.copyright{
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.text-footer{
+    color: #757575;
+    font-size: 15px;
+}
+
+.link-pro{  
+    color: #757575;
+    font-size: 15px;
+}

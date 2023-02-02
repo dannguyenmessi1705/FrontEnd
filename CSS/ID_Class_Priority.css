@@ -1,0 +1,12 @@
+/* Universal: Dinh dang chung cho toan bo web se co co chu 25px, mau xanh, font Segoe*/
+* {
+   color: darkblue; 
+   font-size: 25px;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#TheIDDuyNhat {
+    color: blueviolet;
+}
+.TheClassChoPhepNhieu {
+    color: black;
+}

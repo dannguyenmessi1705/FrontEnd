@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thay thế ảnh chính</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="FallbackImage.css">
+    </head>
+    <body>
+        <div class="heading">
+            <h1 class="title">Thay thế ảnh chính bằng 1 ảnh lỗi(PlaceHolder) khi ảnh chính bị lỗi. Có 2 trường hợp:</h1>
+        </div>
+        <div class="content" style="height: 2000px;">
+            <div class="content a">1. Khi ảnh gặp lỗi là ảnh bình thường, thêm vào từ thuộc tính "img".
+                <p class="description">Ta sẽ sử dụng thuộc tính <i>onerror="this.src='link ảnh thay thế'"</i></p>
+                <span id="VDa"><img onerror="this.src='FallbackImage\\400x400-image.png'" src="https://www.medisom.com.br/public/themes/default/image/background/400x400/background4.jpg"></span>
+            </div>
+            <div class="content b">2. Khi ảnh gặp lỗi là ảnh nền, thêm vào từ thuộc tính "background-image".
+                <p class="description">Ta chỉ cần thêm 1 url của ảnh thay thế vào sau url của ảnh chính trong "background-image".</p>
+                <span id="VDb"></span>
+            </div>
+        </div>
+    </body>
+</html>

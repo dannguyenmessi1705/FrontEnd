@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>
+            first page 
+        </title>
+        <!-- Đổi màu cho đường dẫn link
+            Mặc định với link chưa được click sẽ có dạng màu blue và gạch chân
+            Với link đã được click sẽ có dạng màu tím và gạch chân
+            Với link được đúp chuột hay giữ (active) sẽ có màu đỏ gạch chân -->
+            <style>
+                a:link{
+                    color: green;
+                    background-color: transparent;
+                    text-decoration: none;
+                }    /* Đổi màu link chưa được click bằng màu xanh và không gạch chân */
+                a:visited{
+                    color: pink;
+                    background-color: transparent;
+                    text-decoration: none;
+                } /* Đổi màu link đã được click (visited) bằng màu hồng và không gạch chân */
+                a:hover{
+                    color: red;
+                    background-color: transparent;
+                    text-decoration: underline;
+                } /* Đổi màu link mà con chuột đang được trỏ vào bằng màu đỏ và gạch chân */
+                a:active{
+                    color: yellow;
+                    background-color: transparent;
+                    text-decoration: underline;
+                } /* Đổi màu link đang được click, nháy giữ, đúp chuột bằng màu vàng và gạch chân */
+
+            </style>
+        <body>
+            <ol> <!--Đánh dấu mục bằng số-->
+                <li>Red</li>
+                <li>Blue</li>
+                <li>Green</li>
+            </ol>
+            <ul> <!--Đánh dấu mục bằng dấu chấm-->
+                <li>Red</li>
+                <li>Blue</li>
+                <li>Green</li>
+            </ul>
+            <ol>
+                <li>
+                    <a href="http://www.facebook.com/didannguyen.messi1705">Dan 1</a> <!-- Mở web tại tab hiện hành-->
+                </li>
+                <li>
+                    <a href="http://www.facebook.com/thangnguyen.elnino" target="_blank">Thang 1<br></a> <!--target để chỉ định vị trí mở, -blank là Mở web trên 1 tab mới -->
+                    <a href="http://www.facebook.com/thangnguyen.elnino" target="_self">Thang 2<br></a> <!--target để chỉ định vị trí mở, -self là Mở web mới thay cho tab cũ -->
+                    <a href="http://www.facebook.com/thangnguyen.elnino" target="_parent">Thang 3<br></a> <!--target để chỉ định vị trí mở, -parent gần tương tự với -self -->
+                    <a href="http://www.facebook.com/thangnguyen.elnino" target="_top">Thang 4<br></a> <!--target để chỉ định vị trí mở, -top là Mở web trên toàn bộ cửa sổ, tương tự parent, self -->
+                </li>
+                <!--Click mở Link bằng ảnh-->
+                <li>
+                    <a href="https://vi.wikipedia.org/wiki/Lionel_Messi"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/330px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg" alt="Leo Messi" style="width: 150px; height: 200px"></a>
+                </li>
+                <!--Click vào link để gửi email-->
+                <li>
+                    <a href="mailto:nguyennthanglootfreefire@gmail.com">Send Email</a>
+                </li>
+                <!--Click mở link bằng nút button -->
+                <li>
+                    <button onclick="document.location='https://github.com/dannguyenmessi1705'">GitHub</button>
+                </li>
+                <!--Click vào link có tiêu đề chú thích -->
+                <li>
+                    <a href="https://github.com/dannguyenmessi1705" title="Go to My Github">Link Github</a>
+                </li>
+            </ol>
+            <!-- Tạo bookmark cho trang web bằng việc nhấp vào link, nó sẽ chuyển xuống đoạn web đó 
+                Đánh dấu bookmark bằng attribute id="value"
+                Liên kết bookmark bằng attribute href="#value"-->
+            <p><a href="#C4">Jump to Chapter 4</a></p>
+            <p><a href="#C7">Jump to Chapter 7</a></p>
+            <h2>This is Chapter 1</h2>
+            <p>v..vvvvvv</p>
+            <h2>This is Chapter 2</h2>
+            <p>v..vvvvvv</p>
+            <h2>This is Chapter 3</h2>
+            <p>v..vvvvvv</p>
+            <h2 id="C4">This is Chapter 4</h2>
+            <p>v..vvvvvv</p>
+            <h2>This is Chapter 5</h2>
+            <p>v..vvvvvv</p>
+            <h2>This is Chapter 6</h2>
+            <p>v..vvvvvv</p>
+            <h2 id="C7">This is Chapter 7</h2>
+            <p>v..vvvvvv</p>
+            <h2>This is Chapter 8</h2>
+            <p>v..vvvvvv</p>
+            <h2>This is Chapter 9</h2>
+            <p>v..vvvvvv</p>
+            <h2>This is Chapter 10</h2>
+            <p>v..vvvvvv</p>
+        </body>
+    </head>
+</html>

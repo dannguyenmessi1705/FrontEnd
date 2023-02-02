@@ -1,0 +1,31 @@
+.heading{
+    color: red;
+}
+.content{
+    margin: 10px 10px;
+}
+.title{
+    color: blue;
+    font-size: 20px;
+}
+.VD.a{
+    width: 800px;
+    height: 480px;
+    margin-left: 20%;
+    background-image: linear-gradient(45deg, rgba(207, 70, 70, 0.396), rgba(0, 0, 120, 0.473)), url(http://thepixelboutique.com/wp-content/uploads/2021/11/kich-thuoc-anh-chuan-tren-website.png);
+    background-size: 400px 240px;
+    background-repeat: no-repeat;
+    /* Sử dụng thuộc tính background-clip hoặc background-origin */
+    padding: 10px;
+    border: 20px dashed #333;
+    box-sizing: border-box;
+    background-origin: content-box; /* Hình ảnh chỉ nằm trong vùng content */
+    /* Sử dụng thuộc tính background-position */
+    /* background-position: bottom right; Ảnh ở phía dưới góc phải  */
+    /* background-position: top 40px right 30px; Ảnh ở phía trên góc phải, cách viền trên 40px và cách viền phải 30px */
+    /* background-position: 0 0; Ảnh ở phía trên góc trái, gốc tọa độ (0, 0)*/
+    background-position: 30% 80px; /* Ảnh ở trục x, cách gốc 30%, trục y, cách gốc 80px */
+    /* Cách viết tắt shorthand */
+    background: linear-gradient(45deg, rgba(207, 70, 70, 0.396), rgba(0, 0, 120, 0.473)), url(http://thepixelboutique.com/wp-content/uploads/2021/11/kich-thuoc-anh-chuan-tren-website.png) no-repeat 40% 50% /400px 240px ;
+    
+}  

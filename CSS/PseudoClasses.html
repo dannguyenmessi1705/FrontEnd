@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lớp giả trong CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="PseudoClasses.css">
+        <style>
+            .box{
+                width: 100%;
+                height: 50px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <div>
+            <p class="heading"><b>CSS có nhiều lớp giả, một số lớp giả:</b></p>
+            <ul>
+                <li><b>:root</b>: Lớp giả dùng để đặt biến toàn cục, nói cách khác nó được khai báo giả và coi như đặt ở trong thẻ &lt;html&gt; bao trùm toàn bộ các thẻ.</li>
+                <li><b>:hover</b>: Lớp giả với cú pháp selector:hover dùng để kích hoạt định dạng của đối tượng khi con trỏ chuột trỏ vào đối tượng đó, giúp người dùng cảm giâc có thể nhấn được.</li>
+                <li><b>:active</b>: Lớp giả với cú pháp selector:active dùng để kích hoạt định dạng của đối tượng khi con trỏ chuột click giữ hoặc chuột phải vào đối tượng, 
+                giúp người dùng cảm giác đã ấn vào nút.</li>
+                <li><b>:first-child</b>: Lớp giả với cú pháp selector:first-child dùng để kích hoạt định dạng thẻ con đầu tiên, dùng để thao tác chỉnh sửa với các mục đầu-cuối.</li>
+                <li><b>:last-child</b>: Lớp giả với cú pháp selector:last-child dùng để kích hoạt định dạng thẻ con cuối cùng, dùng để thao tác chỉnh sửa với các mục đầu-cuối.</li>
+
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thuộc tính vị trí trong HTML, CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="PositionInCSS.css">
+    </head>
+    <body>
+        <div>
+            <h1 class="heading">Các thuộc tính liên quan đến việc thay đổi vị trí các đối tượng trong CSS</h1>
+        </div>
+        <div class="content" style="height: 5000px;">
+            <div class="content a">
+                <p class="sub">Trong thuộc tính position có các loại sau: Relative, Absolute, Fixed, Sticky</p>
+                <ul>
+                    <li><b>position: relative;</b><i>- Thuộc tính vị trí tương đối, các phần tử sẽ lấy vị trí ban đầu của chính nó làm gốc (0, 0), đi sau nó là các thuộc tính vị trí (top, right, bottom, left) để thay đổi vị trí.
+                        Sử dụng thuộc tính này sẽ đè lên các thuộc tính khác chứ không đẩy các phần tử khác ra như dùng margin.
+                    </i></li>
+                    <div id="VDa">Relative</div>
+                    <li><b>position: absolute;</b><i>- Thuộc tính vị trí tuyệt đối. Thẻ con sử dụng thuộc tính này sẽ phụ thuộc vào thuộc tính position cua thẻ cha gần nhất</i></li>
+                    <div id="VDbpa">Absolute
+                        <div id="VDbch">Absolute</div>
+                    </div>
+                    <li><b>position: fixed;</b><i>- Thuộc tính làm cho vị trí của đối tượng cố định tại 1 vị trí nào đó của trình duyệt, nó sẽ không bị thay đổi bất kỳ khi nào.</i></li>
+                    <div id="VDc">Fixed</div>
+                    <li><b>position: sticky;</b><i>- Thuộc tính làm cho vị trí của đối tượng dính vào trình duyệt khi kéo trình duyệt theo các hướng. Tuy nhiên nên hạn chế sử dụng tính năng này vì nó không hỗ trợ trên nhiều trình duyệt.</i></li>        </i></li>
+                    <div id="VDd">Sticky</div>
+                </ul>
+
+            </div>
+        </div>
+    </body>
+</html>

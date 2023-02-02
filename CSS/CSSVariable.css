@@ -1,0 +1,12 @@
+:root{
+    --text-color: red;
+}
+h1 {
+    color: var(--text-color);
+}
+#UK {
+    --color-text: green;
+    --size-text: 25px;
+    color: var(--color-text);
+    font-size: var(--size-text);
+}

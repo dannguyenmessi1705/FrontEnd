@@ -1,0 +1,22 @@
+:root{
+    --text-color: red;
+    --text-size: 20px;
+}
+.heading {
+    color: var(--text-color);
+    font-size: var(--text-size);
+}
+.box:hover{
+    background-color: var(--text-color);
+}
+.box:active{
+    background-color: aliceblue;
+}
+ul li:first-child{
+    font-size: 18px;
+    margin: auto;
+}
+li:last-child{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

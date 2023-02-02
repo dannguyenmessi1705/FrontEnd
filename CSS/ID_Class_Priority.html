@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Muc do uu tien trong CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="ID_Class_Priority.css">
+        <style>
+            h1 {
+                color: cadetblue !important;
+                font-size: 30px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1 style="color: brown; font-size: 40px !important;">Trong HTML co cac muc do css uu tien sau day</h1>
+        <ol>
+            <li style="color: brown;">Muc do uu tien dau tien: Inline (1000)</li>
+            <li id="TheIDDuyNhat">Muc do uu tien thu 2: ID (100) (dat id lam attribute cho the roi goi id bang "#"</li>
+            <li class="TheClassChoPhepNhieu">Muc do uu tien thu 3: Class (10) (dat class lam attribute cho the roi goi bang "."</li>
+            <li>Muc do uu tien thu 4: Gan the Tag (1) </li>
+            <li>Cac muc do chung chung, uu tien khi cau lenh o line sau: Inline, External</li>
+            <p class="TheClassChoPhepNhieu"><b>Luu y:</b> Co the ket hop cac muc do voi nhau, muc do nao co thang diem lon hon se duoc uu tien</p>
+            <p><i class="TheClassChoPhepNhieu">Ngoai ra con co dinh dang Universal - dat tat ca web co chung 1 dinh dang ban dau (goi bang "*")</i></p>
+            <p><i class="TheClassChoPhepNhieu">Inherited - cac the con se thua huong format cua the cha</i></p>
+            <p><i class="TheClassChoPhepNhieu">Them tu <b>!Important</b> vao sau attribute thi se co muc do uu tien cao nhat</i></p>
+        </ol>
+    </body>
+</html>

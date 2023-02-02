@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hàm trong CSS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSSFunction.css">
+    </head>
+    <body>
+        <h1 id="var">Trong CSS có các loại hàm sau</h1>
+        <ul>
+            <li id="f1">Hàm <b>var()</b>: Tạo một lớp giả :root rồi đặt biến cho các giá trị màu, cỡ</li>
+            <li id="f2">Hàm <b>calc()</b>: Hàm tính toán. Ví dụ đặt width của thẻ này là 80%+20px => width: calc(80%+20px)</li>
+            <li id="f3">Hàm<b> attr()</b>: Hàm nối thêm từ đã có sẵn. Ví dụ: <br>
+                &lt;a href="http://www.google.com"&gt;Đây là trang chủ google: <br>
+                Để thêm link từ thuộc tính href vào sau cuối ta phải gọi lớp giả sau thẻ a (a::after) rồi đặt giá trị "content" là giá trị của thẻ href: cụ thể <br>
+                a::after{content: attr(href);}Mục đích dùng để ít phải sửa đổi khi 1 số ND cần sửa. Sau khi sử dụng attr ta được<br>
+                <a id="attri"; href="http://www.google.com">Đây là trang chủ google:</a></li>
+        </ul>
+    </body>
+</html>
