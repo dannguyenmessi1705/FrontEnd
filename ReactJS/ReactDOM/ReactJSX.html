@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React-DOM trong FrontEnd</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <!-- Thêm thư viện JSX để có thể tạo React.createElement đơn gian thuần với HTML hơn so vơia cách tạo ở trong file reactdom 
+    Thêm type = "text/babel vào thẻ script để nó ko đọc các câu lệnh của Javascript"-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="root"></div>
+    <div id="footer"></div>
+    <div id="bodymain"></div>
+    <div id="button"></div>
+  </body>
+  <script type="text/babel">
+    const courses = [
+      {
+        name: "HTML, CSS",
+      },
+      {
+        name: "Reponsive Web Design",
+      },
+      {
+        name: "React JS",
+      },
+    ];
+
+    const ulReact = (
+      <ul>
+        {courses.map(function (object) {
+          return <li>{object.name}</li>;
+        })}
+      </ul>
+    );
+    ReactDOM.createRoot(document.getElementById("root")).render(ulReact);
+
+    // Dung class lam Component
+    class End extends React.Component {
+      render() {
+        return (
+          <div className="Footer">
+            <h1>Ket thuc o day</h1>
+          </div>
+        );
+      }
+    }
+    console.log(End);
+    const app = <End></End>;
+
+    ReactDOM.createRoot(document.getElementById("footer")).render(app);
+
+    // Dung function lam Component, viet hoa chu dau, dung class props de truyen vao gia tri trong dau {}
+    function Head(props) {
+      return (
+        <div className="header">
+          <h1>{props.content}</h1>
+        </div>
+      );
+    }
+
+    const ui = <Head content="Day la phan tieu de"></Head>;
+    ReactDOM.createRoot(document.getElementById("header")).render(ui);
+
+    // Truyen 1 Array Class vao HTML bang props vs DOMEvent
+    const lectures = [
+      {
+        id: 15,
+        title: "HTML CSS Pro",
+        description:
+          "Từ cơ bản tới chuyên sâu, thực hành 8 dự án, hàng trăm bài tập, trang hỏi đáp riêng, cấp chứng chỉ sau khóa học và mua một lần học mãi mãi.",
+        students_count: 2208,
+        published_at: "2022-08-18T17:00:00.000000Z",
+        image_url:
+          "https://files.fullstack.edu.vn/f8-prod/courses/15/62f13d2424a47.png",
+      },
+      {
+        id: 19,
+        title: "JavaScript Pro",
+        description: "Khóa học JavaScript Pro",
+        students_count: 0,
+        published_at: "2023-01-31T17:00:00.000000Z",
+        image_url:
+          "https://files.fullstack.edu.vn/f8-prod/courses/19/62f13cb607b4b.png",
+      },
+      {
+        id: 20,
+        title: "ReactJS Pro",
+        description: "Khóa học ReactJS Pro",
+        students_count: 0,
+        published_at: "2023-05-31T17:00:00.000000Z",
+        image_url:
+          "https://files.fullstack.edu.vn/f8-prod/courses/20/62f13dded314e.png",
+      },
+    ];
+
+    function DisplayLecture(props) {
+      return (
+        <div>
+          {/* De truyen xau + bien gia tri vao the tag JSX ta dung 2 ngoac nhon {} bieu dien dang su dung
+              cau lenh cua Javascrip(bien gia tri) roi them 2 dau `` bieu dien la xau, them ${props.bien gia tri} de bieu dien bien gia tri 
+              De truyen style vao tag JSX, su dung "style" va 2 dau {{}}, dau {} dau tien the hien truyen vao 1 gia tri Javascript, yeu cau cua JSX
+                                                                          dau {} thu hai the hien truyen vao 1 object cho bien style cua Javascript do*/}
+          <h1
+            style={{
+              color: "red",
+              fontSize: "50px",
+            }}
+          >{`Tieu de thu ${props.number}`}</h1>
+          {/* Dung {} sau do them 2 dau ` ` de thay cho "" dat className khi vua muon truyen string va 1 bien gia tri trong JS(them $ o truoc va co them {} de bieu dien ky hieu cho phep truyen JS) */}
+          <h2 className={`abc ${props.des}`}>{props.title}</h2>
+          <img src={props.image} />
+          <p>{props.description}</p>
+          <p>{props.publishedAt}</p>
+        </div>
+      );
+    }
+
+    function Play() {
+      return (
+        <div class="course">
+          {lectures.map((lecture, index) => {
+            // index la bien tra ve gia tri thu i cua mang
+            let i = index;
+            /* Dung ngoac nhon de truyen Javascrip vao JSX, ngoac tron de truyen the tag vao JSX
+              Doan map (lectur, index) => () la cach rut gon cho function(lecture, item){
+                return(
+                  Tag JSX
+                );
+              }
+            */
+            return (
+              <DisplayLecture
+                key={lecture.id}
+                title={lecture.title}
+                image={lecture.image_url}
+                publishedAt={lecture.published_at}
+                studentsCount={lecture.students_count}
+                number={i}
+              ></DisplayLecture>
+            );
+          })}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("bodymain")).render(<Play />);
+
+    // DOMEvent Reactjs
+    function Click() {
+      return (
+        <div className="click">
+          <button onDoubleClick={() => console.log(Math.random())}>
+            {" "}
+            ClickME!!!
+          </button>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("button")).render(<Click />);
+  </script>
+</html>

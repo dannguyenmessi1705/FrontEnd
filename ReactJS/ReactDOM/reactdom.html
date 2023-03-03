@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React-DOM trong FrontEnd</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    const postItem = React.createElement(
+      "div",
+      {
+        className: "post-item",
+      },
+      React.createElement(
+        "h2",
+        {
+          title: "Hoc tai f8",
+        },
+        "Hoc ReactJS"
+      ),
+      React.createElement("p", {}, "Hoc tu co ban den nang cao")
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(postItem);
+  </script>
+</html>
