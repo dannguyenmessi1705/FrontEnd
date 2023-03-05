@@ -1,103 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-.section-top-spacing {
-  padding-top: 14rem;
-  padding-bottom: 7rem;
-}
-.section-spacing {
-  padding: 7rem 0;
-}
-.header-area nav.main-nav ul.primary-menu li a {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  text-transform: capitalize;
-  text-decoration: none;
-  font-family: "Helvetica", sans-serif;
-  transition: all 0.3s ease-in-out;
-  padding: 1.5rem 0;
-  position: relative;
-  cursor: pointer;
-}
-.header-area nav.main-nav ul.primary-menu li a:hover {
-  color: #ffb400;
-}
-.header-area nav.main-nav ul.primary-menu li > ul.sub-menu > li a {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: normal;
-  text-transform: capitalize;
-  text-decoration: none;
-  font-family: "Helvetica", sans-serif;
-  transition: all 0.3s ease-in-out;
-  padding: 0.75rem 1.5rem;
-  position: relative;
-  cursor: pointer;
-}
-.header-area nav.main-nav ul.primary-menu li > ul.sub-menu > li a:hover {
-  color: #ffb400;
-}
-.header-area .header-btn .primary-btn {
-  font-size: 1.6rem;
-  text-transform: capitalize;
-  font-weight: 500;
-  background: #03043c;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out;
-  line-height: 1.8rem;
-  letter-spacing: normal;
-  padding: 1rem 2rem;
-}
-.header-area .header-btn .primary-btn:hover {
-  color: #ffffff;
-  background: #ffb400;
-}
-.header-top ul li a i::before {
-  font-size: 1.8rem;
-  color: #03043c;
-  background: #ffffff;
-  padding: 0.5rem;
-  border-radius: 5rem;
-  vertical-align: middle;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-}
-.header-top ul li a i:hover::before {
-  background-color: #fff;
-  color: #03043c;
-}
-.header-top ul.topbar-support li a i:before {
-  font-size: 2rem;
-  color: #fff;
-  background: transparent;
-  padding: 1rem;
-  margin: 0;
-}
-.header-top ul.topbar-support li a i:hover:before {
-  color: #fff;
-  background: transparent;
-}
-.animated-btn {
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-.animated-btn .btn-submit {
-  position: absolute;
-  background: chocolate;
-  color: #fff;
-  font-size: 1.6rem;
-  letter-spacing: 0.1px;
-  border-radius: 0.3rem;
-  cursor: pointer;
-  transition: background 0.5s;
-  overflow: hidden;
-}
-.header-area {
-  padding: 1rem 0;
-}
 .header-area .site-wrapper {
   width: 15%;
 }
@@ -129,7 +29,7 @@
 .header-area nav.main-nav ul.primary-menu li.has-child-menu::after {
   position: absolute;
   right: 0;
-  color: #000;
+  color: #1f2044;
   top: 1.5rem;
   font-family: "boxicons";
   content: "\e9ac";
@@ -475,7 +375,7 @@
   overflow: hidden;
 }
 .footer-area {
-  background: #e5e5e5;
+  background: #e2f1ff;
   padding-top: 5rem;
 }
 .footer-area .social-area ul.social-links {

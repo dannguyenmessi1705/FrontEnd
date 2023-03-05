@@ -42,7 +42,7 @@ window.addEventListener("scroll", function () {
   if (scroll >= 100) {
     this.document.querySelector(".header-area").classList.add("sticky");
     this.document.querySelector(".header-area").style.backgroundColor =
-      "#03043c";
+    "#e5e5e5";
   } else {
     this.document.querySelector(".header-area").classList.remove("sticky");
     this.document.querySelector(".header-area").style.backgroundColor = null;
