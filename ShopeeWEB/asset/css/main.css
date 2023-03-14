@@ -1,0 +1,78 @@
+#header {
+  height: 125px;
+  background: linear-gradient(0, #fe6433, #f53e2d);
+  color: white;
+}
+.navbar__content {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: relative;
+}
+.navbar__content + .navbar__content {
+  margin-left: 0.8rem;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__list {
+  margin-top: 0.8rem;
+  position: relative;
+}
+
+.navbar__content--strong {
+  font-weight: 400;
+}
+.navbar__content--pipe::after {
+  content: "";
+  height: 1.2rem;
+  width: 0.1rem;
+  background-color: #fb9086;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  margin: 0 -0.6rem;
+}
+
+.icon--navbar {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 0.2rem;
+}
+
+.navbar__content:hover,
+.icon--navbar:hover {
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.not--hover {
+  cursor: text;
+  color: white;
+}
+.download-app {
+  position: absolute;
+  width: 18.8rem;
+  background-color: white;
+  top: 120%;
+  left: 0;
+  border-radius: 0.2rem;
+}
+.download-app .qr-code {
+  padding: 0.8rem;
+  width: 100%;
+}
+.link-apps {
+  display: flex;
+  justify-content: space-between;
+}
+.download-app .link-app .app {
+  height: 1.7rem;
+}
+.download-app .link-app:first-child {
+  margin-left: 1.6rem;
+}
+.download-app .link-app:last-child {
+  margin-right: 1.6rem;
+}

@@ -1,6 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import "./SubRefractor.js";
 import SubRefractor from "./SubRefractor.js";
 import UseStateofHook from "./UseStateofHook";
 
