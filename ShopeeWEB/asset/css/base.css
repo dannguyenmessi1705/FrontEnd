@@ -8,7 +8,11 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
   }
-  
+
+  /* background WHITE */
+  .whiteBg{
+    background-color: #fff !important;
+  }
   .grid{
       width: 1200px;
       max-width: 100%;
@@ -21,4 +25,14 @@
       display: flex;
       flex-wrap: wrap;
   }
-  
+@keyframes fadeIn{
+    0%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1;
+    }
+}
