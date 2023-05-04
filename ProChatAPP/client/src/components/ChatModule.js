@@ -243,10 +243,7 @@ class ChatModule extends React.Component {
       room_name,
     } = this.state;
     if (!isLoaded) {
-      return (
-        <div className="loader" />
-
-      );
+      return <div className="loader" />;
     } else if (openVideoChat) {
       return <Redirect push to={"/video/" + room_name} />;
     } else {
@@ -256,7 +253,7 @@ class ChatModule extends React.Component {
             <div
               className="p-4 rounded-lg"
               style={{
-                height: "calc(100vh - 210px)",
+                height: "calc(100vh - 212px)",
                 width: "800px",
                 overflow: "scroll",
               }}
@@ -313,7 +310,9 @@ class ChatModule extends React.Component {
                             : "left"
                         }
                       >
-                        <span className="font-semibold">{message.user.username}</span>
+                        <span className="font-semibold">
+                          {message.user.username}
+                        </span>
                       </div>
                     </div>
                   );
