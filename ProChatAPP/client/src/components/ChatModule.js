@@ -1,5 +1,5 @@
 import EmojiConverter from "emoji-js";
-import React from "react";
+import  React from "react";
 import { Redirect } from "react-router-dom";
 import { animateScroll } from "react-scroll";
 
@@ -253,7 +253,7 @@ class ChatModule extends React.Component {
             <div
               className="p-4 rounded-lg"
               style={{
-                height: "calc(100vh - 212px)",
+                height: "calc(100vh - 164px)",
                 width: "800px",
                 overflow: "scroll",
               }}
