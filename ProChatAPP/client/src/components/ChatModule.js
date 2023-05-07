@@ -1,11 +1,14 @@
-import EmojiConverter from "emoji-js";
-import  React from "react";
+import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { animateScroll } from "react-scroll";
 
 import axios from "axios";
 import { get_user_from_token } from "../api/auth";
 import { get_room, put_user_into_room } from "../api/rooms";
+
+import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
+import Picker from "emoji-picker-react";
+import EmojiConverter from "emoji-js";
 
 var jsemoji = new EmojiConverter();
 jsemoji.replace_mode = "unified";
@@ -40,6 +43,7 @@ class ChatModule extends React.Component {
     this.onOpenEmoji = this.onOpenEmoji.bind(this);
     this.onEmojiSelection = this.onEmojiSelection.bind(this);
     this.onOpenVideoChat = this.onOpenVideoChat.bind(this);
+    this.emojiRef = React.createRef();
   }
   onInputChange(event) {
     this.setState({ message_draft: event.target.value });
@@ -85,24 +89,16 @@ class ChatModule extends React.Component {
         client.send(JSON.stringify(message_obj));
         this.setState({ message_draft: "" }, this.scrollToBottom);
       }
-      client.close(1000, "Deliberate disconnection");
+      client.close(2000, "Deliberate disconnection");
     }
+    document.removeEventListener("click", this.handleDocumentClick);
   }
-  onOpenEmoji() {
-    let currentState = this.state.openEmoji;
-    this.setState({ openEmoji: !currentState });
-  }
-  onEmojiSelection(emoji_code, emoji_data) {
-    let e = emoji_data.emoji;
-    let _message =
-      this.state.message_draft === undefined ? "" : this.state.message_draft;
-    this.setState({ message_draft: _message + e });
-  }
+
 
   componentDidMount() {
     let token = localStorage.getItem("token");
     const instance = axios.create({
-      timeout: 1000,
+      timeout: 5000,
       headers: {
         "Access-Control-Allow-Origin": "*",
         Authorization: `Bearer ${token}`,
@@ -183,6 +179,24 @@ class ChatModule extends React.Component {
         localStorage.removeItem("token");
         console.error("ERROR FETCHING CURRENT USER\n" + err);
       });
+      document.addEventListener("click", this.handleDocumentClick);
+  }
+  handleDocumentClick = (event) => {
+    if (
+      this.emojiRef.current &&
+      !this.emojiRef.current.contains(event.target)
+    ) {
+      this.setState({ openEmoji: false });
+    }
+  };
+  onOpenEmoji() {
+    this.setState({ openEmoji: !this.state.openEmoji });
+  }
+  onEmojiSelection(emoji_code, emoji_data) {
+    let e = emoji_data.emoji;
+    let _message =
+      this.state.message_draft === undefined ? "" : this.state.message_draft;
+    this.setState({ message_draft: _message + e });
   }
 
   onEnterHandler = (event) => {
@@ -235,6 +249,7 @@ class ChatModule extends React.Component {
   // };
 
   render() {
+    // Emoji
     const {
       isLoaded,
       messages,
@@ -248,18 +263,18 @@ class ChatModule extends React.Component {
       return <Redirect push to={"/video/" + room_name} />;
     } else {
       return (
-        <div className="w-2/3">
-          <div className="w-[800px] mx-auto">
+        <div className="w-full h-full border-blue-500">
+          <div className="w-full h-full mx-auto">
             <div
               className="p-4 rounded-lg"
               style={{
-                height: "calc(100vh - 164px)",
-                width: "800px",
                 overflow: "scroll",
+                height: "calc(100vh - 164px)",
+                width: "w-full",
               }}
               id="message-list"
             >
-              <div className="space-y-4 w-[800px]">
+              <div className="space-y-4 w-full">
                 {messages.map((message, index) => {
                   return (
                     <div
@@ -279,53 +294,62 @@ class ChatModule extends React.Component {
                             : "left",
                         marginLeft:
                           message.user.username === this.state.currentUser
-                            ? "400px"
+                            ? "500px"
                             : "auto",
                         marginRight:
                           message.user.username === this.state.currentUser
                             ? "auto"
-                            : "400px",
+                            : "500px",
                       }}
                     >
                       <div
-                        className={`mx-8 p-2 rounded-lg ${
+                        className={`flex flex-col p-2 rounded-lg ${
                           message.user.username === this.state.currentUser
                             ? "bg-blue-500 text-white"
                             : "bg-gray-500 text-white"
                         }`}
                       >
-                        {message.content}
-                      </div>
-                      <div
-                        padding="10px"
-                        style={{
-                          float:
+                        <div
+                          padding="12px"
+                          style={{
+                            float:
+                              message.user.username === this.state.currentUser
+                                ? "right"
+                                : "left",
+                          }}
+                          textAlign={
                             message.user.username === this.state.currentUser
                               ? "right"
-                              : "left",
-                        }}
-                        textAlign={
-                          message.user.username === this.state.currentUser
-                            ? "right"
-                            : "left"
-                        }
-                      >
-                        <span className="font-semibold">
-                          {message.user.username}
-                        </span>
+                              : "left"
+                          }
+                        >
+                          <div className="text-base font-bold text-white-400">
+                            {message.user.username}
+                          </div>
+                          <div
+                            className={`rounded-lg text-base text-white-300`}
+                            textAlign={
+                              message.user.username === this.state.currentUser
+                                ? "right"
+                                : "left"
+                            }
+                          >
+                            {message.content}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   );
                 })}
               </div>
             </div>
-            <div className="flex items-center p-4 rounded-lg">
+            <div className="flex items-center p-4 rounded-md">
               <input
                 placeholder="Type a message..."
                 required=""
                 type="text"
                 name="text"
-                className="px-5 py-5 pl-10 pr-10 mr-20 w-2/3 font-medium text-md font-primary info-panels input-color-group-one input-color"
+                className="px-5 py-5 pl-10 pr-10 mr-20 w-2/3 rounded-md font-medium text-md font-primary info-panels input-color-group-one input-color"
                 value={this.state.message_draft}
                 onChange={(event) =>
                   this.setState({ message_draft: event.target.value })
@@ -337,6 +361,29 @@ class ChatModule extends React.Component {
                   }
                 }}
               />
+              <div ref={this.emojiRef} className="absolute">
+                <button
+                  className="h-12 w-12"
+                  onClick={() => {
+                    this.onOpenEmoji();
+                  }}
+                >
+                  <SentimentVerySatisfiedIcon />
+                </button>
+                {this.state.openEmoji && (
+                  <Picker
+                    onEmojiClick={this.onEmojiSelection}
+                    disableAutoFocus={true}
+                    disableSearchBar={true}
+                    native
+                    pickerStyle={{
+                      position: "absolute",
+                      bottom: "80px",
+                      left: "30px",
+                    }}
+                  />
+                )}
+              </div>
               <send
                 className="font-medium h-12"
                 onClick={(event) => this.onClickHandler(event)}
