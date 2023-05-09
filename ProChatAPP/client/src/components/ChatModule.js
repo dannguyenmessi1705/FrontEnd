@@ -373,8 +373,8 @@ class ChatModule extends React.Component {
                 {this.state.openEmoji && (
                   <Picker
                     onEmojiClick={this.onEmojiSelection}
-                    disableAutoFocus={true}
-                    disableSearchBar={true}
+                    disableAutoFocus={false}
+                    disableSearchBar={false}
                     native
                     pickerStyle={{
                       position: "absolute",
