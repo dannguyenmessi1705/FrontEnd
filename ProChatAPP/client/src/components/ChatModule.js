@@ -18,7 +18,7 @@ var client = null;
 function checkWebSocket(username, roomname) {
   if (client === null || client.readyState === WebSocket.CLOSED) {
     client = new WebSocket(
-      "ws://localhost:8000/ws/" + roomname + "/" + username
+      "wss://api-pro-chat.onrender.com/ws/" + roomname + "/" + username
     );
   }
   return client;
@@ -93,7 +93,6 @@ class ChatModule extends React.Component {
     }
     document.removeEventListener("click", this.handleDocumentClick);
   }
-
 
   componentDidMount() {
     let token = localStorage.getItem("token");
@@ -179,7 +178,7 @@ class ChatModule extends React.Component {
         localStorage.removeItem("token");
         console.error("ERROR FETCHING CURRENT USER\n" + err);
       });
-      document.addEventListener("click", this.handleDocumentClick);
+    document.addEventListener("click", this.handleDocumentClick);
   }
   handleDocumentClick = (event) => {
     if (
