@@ -109,7 +109,7 @@ class Profile extends React.Component {
         );
       })
       .catch((err) => {
-        // localStorage.removeItem("token");
+        localStorage.removeItem("token");
         console.log("ERROR FETCHING CURRENT USER and profile pic\n" + err);
       });
   }
