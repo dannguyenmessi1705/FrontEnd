@@ -10,7 +10,7 @@ import About from "./components/layout/About";
 import DataContextsProvider from "./contexts/DataContexts";
 
 function App() {
-  return (
+  return ( 
     <AuthContextsProvider>
       <DataContextsProvider>
         <Router>

@@ -1,0 +1,48 @@
+services: # các service cần thiết
+  back-end: # tên service
+    build: # build image từ Dockerfile
+      context: be # thư mục chứa Dockerfile
+    container_name: back-end # tên container
+    working_dir: /usr/app/node # thư mục làm việc
+    env_file:
+      - ./be/.env # file chứa các biến môi trường
+    networks:
+      - api-network # tên network
+    # volumes:
+    #   - ./be:/usr/app/node # mount thư mục hiện tại vào thư mục /usr/app/node 
+    tty: true # cho phép sử dụng terminal
+    ports: # port mặc định của container
+      - "3001:3001" # port máy host:port container
+    command: npm start # lệnh chạy khi khởi động container
+  
+  front-end: # tên service
+    build: 
+      context: fe # thư mục chứa Dockerfile
+    container_name: front-end # tên container
+    working_dir: /usr/app/react # thư mục làm việc
+    networks:
+      - api-network # tên network
+    # volumes:
+    #   - ./fe:/usr/app/react # mount thư mục hiện tại vào thư mục /usr/app/react
+    tty: true # cho phép sử dụng terminal
+    ports: # port mặc định của container
+      - "3000:3000" # port máy host:port container
+    command: npm start # lệnh chạy khi khởi động container
+
+  nginx: # tên service
+    build: 
+      context: nginx # thư mục chứa Dockerfile
+    container_name: nginx # tên container
+    restart: always # luôn khởi động lại container khi bị lỗi
+    ports: # port mặc định của container
+      - "8000:80" # port máy host:port container
+    depends_on: # chờ các service khác khởi động xong
+      - back-end
+      - front-end
+    networks:
+      - api-network # tên network
+
+networks: # tạo network
+  api-network: # tên network
+    driver: bridge # chế độ bridge
+    

@@ -25,20 +25,20 @@ Content-Type: application/json
     }
 ]
 #### Get Player v1/player/id
-GET http://localhost:1705/v1/player/6426b9347fa27cfbe3d8ea5f
+GET http://localhost:3001/v1/player/6426b9347fa27cfbe3d8ea5f
 #### Get All Player
 
-GET http://localhost:1705/v1/player
+GET http://localhost:3001/v1/player
 
 ### DELETE PLAYER
-DELETE http://localhost:1705/v1/player/6426b9347fa27cfbe3d8ea5f
+DELETE http://localhost:3001/v1/player/6426b9347fa27cfbe3d8ea5f
 
 
 
 
 
 ### REGISTER
-POST http://localhost:1705/auth/register
+POST http://localhost:3001/auth/register
 Content-Type: application/json
 
 {
@@ -50,7 +50,7 @@ Content-Type: application/json
 
 #### LOGIN
 
-POST http://localhost:1705/auth/login
+POST http://localhost:3001/auth/login
 Content-Type: application/json
 
 {
@@ -59,7 +59,7 @@ Content-Type: application/json
 }
 
 ##### ADD Player
-POST  http://localhost:1705/user/player/
+POST  http://localhost:3001/user/player/
 Content-Type: application/json
 #Authorization: Bearer <token lay o accessToken khi login>
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZmJmZDIzMjFiMWM0YmVmN2VhZTQiLCJpYXQiOjE2ODI0MTM3Mzl9.FNvs2mfMxmNfNyJMbUFG_devTJcc75RhOyFkvWx3EvI
@@ -70,7 +70,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJkZmJmZ
 }
 
 #### Add Player by Author
-POST  http://localhost:1705/user/player/many
+POST  http://localhost:3001/user/player/many
 Content-Type: application/json
 #Authorization: Bearer <token lay o accessToken khi login>
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM1MzA3N2E3MDEwNWVlODI3ZTg4ZWEiLCJpYXQiOjE2ODEyMDc0MzF9.BSjUqNmWxUoe0ZQ0VpF8DeY8CwXYVqUyDOE2M-Agz-8
@@ -280,13 +280,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM1MzA3N
 
 
 ### GET PLAYER by Author
-GET http://localhost:1705/user/player
+GET http://localhost:3001/user/player
 #Authorization: Bearer <token lay o accessToken khi login>
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI1ZDJiNWEyNDU2OWI5MGNjOWUyMGQiLCJpYXQiOjE2ODA1NDEzNDR9.zODweVtpMXTQDXNoZNJvhGU-Hyxm0v6Wd7_LZ-C-iCY
 
 
 #### UPDATE PLAYER by Author
-PUT http://localhost:1705/user/player/642b1e36ad3ad8fd515b57e6
+PUT http://localhost:3001/user/player/642b1e36ad3ad8fd515b57e6
 Content-Type: application/json
 #Authorization: Bearer <token lay o accessToken khi login>
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI1ZDJiNWEyNDU2OWI5MGNjOWUyMGQiLCJpYXQiOjE2ODA1NDEzNDR9.zODweVtpMXTQDXNoZNJvhGU-Hyxm0v6Wd7_LZ-C-iCY
@@ -301,6 +301,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI1ZDJiN
 }
 
 ### DELETE PLAYER by Author
-DELETE http://localhost:1705/user/player/642b1e36ad3ad8fd515b57e6
+DELETE http://localhost:3001/user/player/642b1e36ad3ad8fd515b57e6
 #Authorization: Bearer <token lay o accessToken khi login>
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI1ZDJiNWEyNDU2OWI5MGNjOWUyMGQiLCJpYXQiOjE2ODA1NDEzNDR9.zODweVtpMXTQDXNoZNJvhGU-Hyxm0v6Wd7_LZ-C-iCY

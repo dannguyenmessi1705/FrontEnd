@@ -10,8 +10,6 @@ const authRoute = require("./routes/auth.route");
 const userManageRoute = require("./routes/userManagePlayer.route");
 // const { options } = require("./routes/player.route");
 
-
-
 dotenv.config();
 // var corsOptions = {
 //   origin: "http://localhost:8081",
@@ -29,7 +27,7 @@ app.use("/v1/player", playerRoute);
 app.use("/user/player", userManageRoute);
 
 // SEVER RUNNING
-const PORT = process.env.PORT || 1705;
+const PORT = 3001;
 app.listen(PORT, async () => {
   console.log(`Server is running on PORT ${PORT}...`);
 });
